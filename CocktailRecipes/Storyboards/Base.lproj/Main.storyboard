@@ -11,7 +11,7 @@
         <!--Recipes-->
         <scene sceneID="cn1-9o-Va1">
             <objects>
-                <tableViewController id="XS4-Vq-Ld4" customClass="MargaritaViewController" customModule="CocktailRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="XS4-Vq-Ld4" customClass="MargaritasTypesViewController" customModule="CocktailRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="MmB-wu-dIW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="877.5" y="64.436619718309856"/>
         </scene>
-        <!--Margaritas Details View Controller-->
+        <!--Margaritas Detail View Controller-->
         <scene sceneID="WUg-2o-T9G">
             <objects>
-                <viewController id="swD-m5-FyG" customClass="MargaritasDetailsViewController" customModule="CocktailRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="swD-m5-FyG" customClass="MargaritasDetailViewController" customModule="CocktailRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2hR-BS-XBO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
