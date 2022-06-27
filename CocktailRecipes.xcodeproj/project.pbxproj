@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD4DBAE3286A31BC00A742A8 /* MargaritaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4DBAE2286A31BC00A742A8 /* MargaritaViewController.swift */; };
+		AD4DBAE5286A320D00A742A8 /* MargaritasDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4DBAE4286A320D00A742A8 /* MargaritasDetailsViewController.swift */; };
 		AD7469AC286A28780060A657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7469AB286A28780060A657 /* AppDelegate.swift */; };
 		AD7469AE286A28780060A657 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7469AD286A28780060A657 /* SceneDelegate.swift */; };
-		AD7469B0286A28780060A657 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7469AF286A28780060A657 /* ViewController.swift */; };
 		AD7469B3286A28780060A657 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7469B1286A28780060A657 /* Main.storyboard */; };
 		AD7469B5286A28780060A657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7469B4286A28780060A657 /* Assets.xcassets */; };
 		AD7469B8286A28780060A657 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7469B6286A28780060A657 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD4DBAE2286A31BC00A742A8 /* MargaritaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MargaritaViewController.swift; sourceTree = "<group>"; };
+		AD4DBAE4286A320D00A742A8 /* MargaritasDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MargaritasDetailsViewController.swift; sourceTree = "<group>"; };
 		AD7469A8286A28780060A657 /* CocktailRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7469AB286A28780060A657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD7469AD286A28780060A657 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD7469AF286A28780060A657 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AD7469B2286A28780060A657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD7469B4286A28780060A657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7469B7286A28780060A657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +58,64 @@
 		AD7469AA286A28780060A657 /* CocktailRecipes */ = {
 			isa = PBXGroup;
 			children = (
-				AD7469AB286A28780060A657 /* AppDelegate.swift */,
-				AD7469AD286A28780060A657 /* SceneDelegate.swift */,
-				AD7469AF286A28780060A657 /* ViewController.swift */,
-				AD7469B1286A28780060A657 /* Main.storyboard */,
-				AD7469B4286A28780060A657 /* Assets.xcassets */,
-				AD7469B6286A28780060A657 /* LaunchScreen.storyboard */,
-				AD7469B9286A28780060A657 /* Info.plist */,
+				AD7469C4286A29040060A657 /* Services */,
+				AD7469C3286A28FB0060A657 /* Models */,
+				AD7469BF286A28BF0060A657 /* App */,
+				AD7469C0286A28C80060A657 /* ViewControllers */,
+				AD7469C1286A28D60060A657 /* Storyboards */,
+				AD7469C2286A28E70060A657 /* Resources */,
 			);
 			path = CocktailRecipes;
+			sourceTree = "<group>";
+		};
+		AD7469BF286A28BF0060A657 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AD7469AB286A28780060A657 /* AppDelegate.swift */,
+				AD7469AD286A28780060A657 /* SceneDelegate.swift */,
+				AD7469B9286A28780060A657 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AD7469C0286A28C80060A657 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD4DBAE2286A31BC00A742A8 /* MargaritaViewController.swift */,
+				AD4DBAE4286A320D00A742A8 /* MargaritasDetailsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AD7469C1286A28D60060A657 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AD7469B1286A28780060A657 /* Main.storyboard */,
+				AD7469B6286A28780060A657 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AD7469C2286A28E70060A657 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD7469B4286A28780060A657 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AD7469C3286A28FB0060A657 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AD7469C4286A29040060A657 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +189,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD7469B0286A28780060A657 /* ViewController.swift in Sources */,
+				AD4DBAE5286A320D00A742A8 /* MargaritasDetailsViewController.swift in Sources */,
 				AD7469AC286A28780060A657 /* AppDelegate.swift in Sources */,
+				AD4DBAE3286A31BC00A742A8 /* MargaritaViewController.swift in Sources */,
 				AD7469AE286A28780060A657 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CocktailRecipes/Info.plist;
+				INFOPLIST_FILE = CocktailRecipes/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -303,7 +355,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +367,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CocktailRecipes/Info.plist;
+				INFOPLIST_FILE = CocktailRecipes/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,7 +382,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
