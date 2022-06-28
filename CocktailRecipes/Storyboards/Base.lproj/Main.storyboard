@@ -8,69 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Recipes-->
-        <scene sceneID="cn1-9o-Va1">
-            <objects>
-                <tableViewController id="XS4-Vq-Ld4" customClass="MargaritasTypesViewController" customModule="CocktailRecipes" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="MmB-wu-dIW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="6Pv-4t-WXt">
-                                <rect key="frame" x="0.0" y="44.5" width="320" height="100"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Pv-4t-WXt" id="R3q-1U-JbX">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RQe-7t-H0l">
-                                            <rect key="frame" x="0.0" y="0.0" width="140" height="100"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="140" id="zgX-hE-m6u"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKA-Kd-Rs6">
-                                            <rect key="frame" x="145" y="26" width="149" height="26.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWf-14-MnV">
-                                            <rect key="frame" x="145" y="62.5" width="149" height="23"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="RQe-7t-H0l" secondAttribute="bottom" id="H60-RX-aNF"/>
-                                        <constraint firstItem="bWf-14-MnV" firstAttribute="top" secondItem="sKA-Kd-Rs6" secondAttribute="bottom" constant="10" id="LTA-D4-6Vm"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="sKA-Kd-Rs6" secondAttribute="trailing" constant="10" id="Lsy-QU-3pJ"/>
-                                        <constraint firstItem="bWf-14-MnV" firstAttribute="leading" secondItem="RQe-7t-H0l" secondAttribute="trailing" constant="5" id="TnD-Rf-ZMS"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="bWf-14-MnV" secondAttribute="trailing" constant="10" id="VVW-AT-48y"/>
-                                        <constraint firstItem="sKA-Kd-Rs6" firstAttribute="leading" secondItem="RQe-7t-H0l" secondAttribute="trailing" constant="5" id="kAY-95-SdU"/>
-                                        <constraint firstItem="sKA-Kd-Rs6" firstAttribute="top" secondItem="R3q-1U-JbX" secondAttribute="topMargin" constant="15" id="qr7-Sc-6Jl"/>
-                                        <constraint firstItem="RQe-7t-H0l" firstAttribute="top" secondItem="R3q-1U-JbX" secondAttribute="top" id="yKL-nu-Yp6"/>
-                                        <constraint firstItem="RQe-7t-H0l" firstAttribute="leading" secondItem="R3q-1U-JbX" secondAttribute="leading" id="z1L-Cv-pDm"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="swD-m5-FyG" kind="presentation" trigger="accessoryAction" modalPresentationStyle="automatic" id="FZm-ZL-Krl"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="XS4-Vq-Ld4" id="4HA-2f-R8V"/>
-                            <outlet property="delegate" destination="XS4-Vq-Ld4" id="t2O-lX-rrq"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Recipes" id="iUM-Lz-MOz"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yQJ-bb-2yh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="877.5" y="64.436619718309856"/>
-        </scene>
         <!--Margaritas Detail View Controller-->
         <scene sceneID="WUg-2o-T9G">
             <objects>
@@ -135,12 +72,68 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="XS4-Vq-Ld4" kind="relationship" relationship="rootViewController" id="0dh-2F-Hlw"/>
+                        <segue destination="u8r-An-xli" kind="relationship" relationship="rootViewController" id="PvU-2u-Q4i"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKW-C0-byy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="143" y="64"/>
+        </scene>
+        <!--Recepies-->
+        <scene sceneID="rJw-xh-AGJ">
+            <objects>
+                <tableViewController id="u8r-An-xli" customClass="MargaritasTypesViewController" customModule="CocktailRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="nWp-hK-C4N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="margaritaCell" rowHeight="107" id="M2E-eg-7aK" customClass="MargaritaViewCell" customModule="CocktailRecipes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="320" height="107"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M2E-eg-7aK" id="ySU-3r-XRo">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="107"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hd8-1t-JPN">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="107"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="zuI-8E-cY4"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zul-Jo-azL">
+                                            <rect key="frame" x="139" y="31" width="160" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Zul-Jo-azL" firstAttribute="leading" secondItem="Hd8-1t-JPN" secondAttribute="trailing" constant="19" id="7df-lr-ZU4"/>
+                                        <constraint firstItem="Hd8-1t-JPN" firstAttribute="top" secondItem="ySU-3r-XRo" secondAttribute="top" id="EVr-5c-mW4"/>
+                                        <constraint firstItem="Hd8-1t-JPN" firstAttribute="leading" secondItem="ySU-3r-XRo" secondAttribute="leading" id="Xa3-h8-3ll"/>
+                                        <constraint firstAttribute="bottom" secondItem="Hd8-1t-JPN" secondAttribute="bottom" id="cuI-9j-lSU"/>
+                                        <constraint firstItem="Zul-Jo-azL" firstAttribute="top" secondItem="ySU-3r-XRo" secondAttribute="topMargin" constant="20" id="und-m4-j2v"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Zul-Jo-azL" secondAttribute="trailing" constant="5" id="z28-tV-UM9"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="margaritaImage" destination="Hd8-1t-JPN" id="yDO-Rp-pEo"/>
+                                    <outlet property="nameLabel" destination="Zul-Jo-azL" id="288-eu-keD"/>
+                                    <segue destination="swD-m5-FyG" kind="presentation" trigger="accessoryAction" id="7uG-W0-Aqr"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="u8r-An-xli" id="ukB-cx-5A5"/>
+                            <outlet property="delegate" destination="u8r-An-xli" id="WcK-sa-DDD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Recepies" id="Hip-vY-2CJ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4tZ-Zq-uYK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862.5" y="62.323943661971832"/>
         </scene>
     </scenes>
     <resources>
