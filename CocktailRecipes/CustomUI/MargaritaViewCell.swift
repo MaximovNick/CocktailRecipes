@@ -9,26 +9,10 @@ import UIKit
 
 class MargaritaViewCell: UITableViewCell {
     
-    @IBOutlet var margaritaImage: UIImageView!
+    @IBOutlet var margaritasImage: UIImageView!
     
-    @IBOutlet var nameLabel: UILabel!
-}
-
-// MARK: - fetchImage
-extension MargaritaViewCell {
+    @IBOutlet var margaritasNameLabel: UILabel!
     
-    func configure(with margarita: Margarita) {
-        guard let url = URL(string: margarita.strDrinkThumb ?? "") else { return }
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
-            }
-            DispatchQueue.main.async {
-                self.nameLabel.text = margarita.strDrink
-                self.margaritaImage.image = UIImage(data: data)
-            }
-            
-        }.resume()
-    }
+    @IBOutlet var margaritasComponentLabel: UILabel!
+    
 }

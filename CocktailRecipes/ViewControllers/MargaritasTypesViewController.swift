@@ -19,12 +19,24 @@ class MargaritasTypesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.rowHeight = 180
         
-        
-        NetworkManager.fetchData() { drink in
+        NetworkManager.shared.fetchData() { drink in
             self.margaritas = drink.drinks
         }
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let detailVC = segue.destination as? MargaritasDetailViewController else { return }
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let cell = tableView.cellForRow(at: indexPath) as? MargaritaViewCell else { return }
+        
+        detailVC.margarita = margaritas[indexPath.row]
+        detailVC.margaritasImage = cell.margaritasImage.image
+        
     }
     
     // MARK: - Table view data source
@@ -32,14 +44,19 @@ class MargaritasTypesViewController: UITableViewController {
         margaritas.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "margaritaCell", for: indexPath) as? MargaritaViewCell else { return UITableViewCell() }
         
         let margarita = margaritas[indexPath.row]
         
-        cell.configure(with: margarita)
+        cell.margaritasNameLabel.text = margarita.strDrink
+        cell.margaritasComponentLabel.text = margarita.composition
         
+        NetworkManager.shared.fetchImage(with: margarita) { data in
+            DispatchQueue.main.async {
+                cell.margaritasImage.image = UIImage(data: data)
+            }
+        }
         return cell
     }
 }
