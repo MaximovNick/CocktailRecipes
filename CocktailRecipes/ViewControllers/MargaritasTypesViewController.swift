@@ -9,6 +9,7 @@ import UIKit
 
 class MargaritasTypesViewController: UITableViewController {
     
+    // MARK: - Public Properties
     var margaritas: [Margarita] = [] {
         didSet {
             DispatchQueue.main.async {
@@ -17,6 +18,7 @@ class MargaritasTypesViewController: UITableViewController {
         }
     }
     
+    // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,12 +51,14 @@ class MargaritasTypesViewController: UITableViewController {
         
         let margarita = margaritas[indexPath.row]
         
+        
         cell.margaritasNameLabel.text = margarita.strDrink
         cell.margaritasComponentLabel.text = margarita.composition
         
         NetworkManager.shared.fetchImage(with: margarita) { data in
             DispatchQueue.main.async {
                 cell.margaritasImage.image = UIImage(data: data)
+                
             }
         }
         return cell
