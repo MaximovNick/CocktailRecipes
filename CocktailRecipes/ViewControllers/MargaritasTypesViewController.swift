@@ -22,10 +22,16 @@ class MargaritasTypesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = 180
+        tableView.rowHeight = 160
         
-        NetworkManager.shared.fetchData() { drink in
-            self.margaritas = drink.drinks
+        NetworkManager.shared.fetch(dataType: Drink.self, from: Link.margaritasUrl.rawValue) { result in
+            switch result {
+                
+            case .success(let drink):
+                self.margaritas = drink.drinks
+            case .failure(let error):
+                print(error)
+            }
         }
     }
     
@@ -55,12 +61,22 @@ class MargaritasTypesViewController: UITableViewController {
         cell.margaritasNameLabel.text = margarita.strDrink
         cell.margaritasComponentLabel.text = margarita.composition
         
-        NetworkManager.shared.fetchImage(with: margarita) { data in
-            DispatchQueue.main.async {
-                cell.margaritasImage.image = UIImage(data: data)
+        NetworkManager.shared.fetchImage(from: margarita.strDrinkThumb) { result in
+            switch result {
                 
+            case .success(let data):
+                cell.margaritasImage.image = UIImage(data: data)
+            case .failure(let error):
+                print(error)
             }
         }
+        
+//        NetworkManager.shared.fetchImage(with: margarita) { data in
+//            DispatchQueue.main.async {
+//                cell.margaritasImage.image = UIImage(data: data)
+//                
+//            }
+//        }
         return cell
     }
 }
