@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AD4DBAE7286A343100A742A8 /* MargaritasDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4DBAE6286A343100A742A8 /* MargaritasDetailViewController.swift */; };
-		AD4DBAE9286A34BA00A742A8 /* MargaritasTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4DBAE8286A34BA00A742A8 /* MargaritasTypesViewController.swift */; };
 		AD4DBAEB286B0AED00A742A8 /* Margarita.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4DBAEA286B0AED00A742A8 /* Margarita.swift */; };
 		AD4DBAED286B0D8F00A742A8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4DBAEC286B0D8F00A742A8 /* NetworkManager.swift */; };
 		AD4DBAF2286B88BB00A742A8 /* MargaritaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4DBAF1286B88BB00A742A8 /* MargaritaViewCell.swift */; };
@@ -17,11 +16,11 @@
 		AD7469B3286A28780060A657 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7469B1286A28780060A657 /* Main.storyboard */; };
 		AD7469B5286A28780060A657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7469B4286A28780060A657 /* Assets.xcassets */; };
 		AD7469B8286A28780060A657 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7469B6286A28780060A657 /* LaunchScreen.storyboard */; };
+		ADE0FC1128746F6100B4FBE4 /* MargaritaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE0FC1028746F6100B4FBE4 /* MargaritaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD4DBAE6286A343100A742A8 /* MargaritasDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MargaritasDetailViewController.swift; sourceTree = "<group>"; };
-		AD4DBAE8286A34BA00A742A8 /* MargaritasTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MargaritasTypesViewController.swift; sourceTree = "<group>"; };
 		AD4DBAEA286B0AED00A742A8 /* Margarita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Margarita.swift; sourceTree = "<group>"; };
 		AD4DBAEC286B0D8F00A742A8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AD4DBAF1286B88BB00A742A8 /* MargaritaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MargaritaViewCell.swift; sourceTree = "<group>"; };
@@ -32,6 +31,7 @@
 		AD7469B4286A28780060A657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7469B7286A28780060A657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD7469B9286A28780060A657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADE0FC1028746F6100B4FBE4 /* MargaritaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MargaritaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,7 @@
 		AD7469C0286A28C80060A657 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AD4DBAE8286A34BA00A742A8 /* MargaritasTypesViewController.swift */,
+				ADE0FC1028746F6100B4FBE4 /* MargaritaViewController.swift */,
 				AD4DBAE6286A343100A742A8 /* MargaritasDetailViewController.swift */,
 			);
 			path = ViewControllers;
@@ -208,11 +208,11 @@
 			files = (
 				AD4DBAED286B0D8F00A742A8 /* NetworkManager.swift in Sources */,
 				AD7469AC286A28780060A657 /* AppDelegate.swift in Sources */,
-				AD4DBAE9286A34BA00A742A8 /* MargaritasTypesViewController.swift in Sources */,
 				AD4DBAEB286B0AED00A742A8 /* Margarita.swift in Sources */,
 				AD4DBAF2286B88BB00A742A8 /* MargaritaViewCell.swift in Sources */,
 				AD7469AE286A28780060A657 /* SceneDelegate.swift in Sources */,
 				AD4DBAE7286A343100A742A8 /* MargaritasDetailViewController.swift in Sources */,
+				ADE0FC1128746F6100B4FBE4 /* MargaritaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
