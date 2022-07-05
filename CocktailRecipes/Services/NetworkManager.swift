@@ -6,49 +6,60 @@
 //
 
 import Foundation
-import UIKit
+
+enum Link: String {
+    case margaritasUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+}
+
+enum NetworkError: Error {
+    case invalidURL
+    case noData
+    case decodingError
+}
 
 class NetworkManager {
     
     static let shared = NetworkManager()
     private init() {}
     
-    // MARK: - fetchData
-    func fetchData(_ completion: @escaping (Drink) -> Void) {
-        
-        guard let url = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita") else { return }
+    func fetch<T: Decodable>(dataType: T.Type, from url: String, completion: @escaping(Result<T, NetworkError>) -> Void) {
+        guard let url = URL(string: url) else {
+            completion(.failure(.invalidURL))
+            return
+        }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {
+                completion(.failure(.noData))
                 print(error?.localizedDescription ?? "No error description")
                 return
             }
             do {
-                let drink = try JSONDecoder().decode(Drink.self, from: data)
-                completion(drink)
-            } catch let error {
-                print(error.localizedDescription)
+                let type = try JSONDecoder().decode(T.self, from: data)
+                DispatchQueue.main.async {
+                    completion(.success(type))
+                }
+            } catch {
+                completion(.failure(.decodingError))
             }
+
         }.resume()
     }
     
-    
-    // MARK: - fetchImage
-    func fetchImage(with margarita: Margarita, completion: @escaping (_ data: Data) -> ()) {
-        guard let url = URL(string: margarita.strDrinkThumb ?? "") else { return }
-        
-        URLSession.shared.downloadTask(with: url) { localUrl, _, error in
-            guard let localUrl = localUrl else {
-                print(error?.localizedDescription ?? "No error description")
+    func fetchImage(from url: String?, completion: @escaping(Result<Data, NetworkError>) -> Void) {
+        guard let url = URL(string: url ?? "") else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: url) else {
+                completion(.failure(.noData))
                 return
             }
-            do {
-                let data = try Data(contentsOf: localUrl)
-                completion(data)
-            } catch let error {
-                print(error.localizedDescription)
+            DispatchQueue.main.async {
+                completion(.success(imageData))
             }
-        }.resume()
+        }
     }
 }
 
